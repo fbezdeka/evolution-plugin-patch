@@ -1,0 +1,19 @@
+Source: evolution-module-patch
+Section: utils
+Priority: optional
+Maintainer: "Florian Bezdeka" <florian@bezdeka.de>
+Build-Depends: cmake,
+               pkg-config,
+               gcc (>= 10),
+               debhelper-compat (= 13),
+               evolution-dev,
+               libebook1.2-dev,
+Standards-Version: 4.5.1
+Homepage: https://github.com/fbezdeka/evolution-module-patch
+
+Package: evolution-module-patch
+Architecture: any
+Multi-Arch: foreign
+Depends: ${shlibs:Depends}, ${misc:Depends}, evolution, highlight
+Description: Simple evolution module that automatically highlights mails that
+  have a subject starting with ""[PATCH".

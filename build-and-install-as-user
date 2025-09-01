@@ -1,0 +1,12 @@
+#!/bin/bash
+
+mkdir build
+cd build
+
+cmake .. \
+	-DCMAKE_INSTALL_PREFIX=~/.local/share/evolution/modules/ \
+	-DFORCE_INSTALL_PREFIX=ON
+
+cmake --build .
+
+cmake --install .
